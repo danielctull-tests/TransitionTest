@@ -7,21 +7,31 @@
 //
 
 #import "ViewController.h"
+#import "FullscreenAnimationController.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UIViewControllerTransitioningDelegate>
 @end
 
 @implementation ViewController
             
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (instancetype)initWithCoder:(NSCoder *)coder {
+	self = [super initWithCoder:coder];
+	if (!self) return nil;
+	self.transitioningDelegate = self;
+	return self;
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+	return [[FullscreenAnimationController alloc] initWithSourceViewController:nil];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+																  presentingController:(UIViewController *)presenting
+																	  sourceController:(UIViewController *)source {
+
+	return [[FullscreenAnimationController alloc] initWithSourceViewController:source];
 }
 
 @end

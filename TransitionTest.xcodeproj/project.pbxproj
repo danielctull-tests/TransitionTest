@@ -13,6 +13,7 @@
 		24694FC319AF187800A4E445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24694FC119AF187800A4E445 /* Main.storyboard */; };
 		24694FC519AF187800A4E445 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24694FC419AF187800A4E445 /* Images.xcassets */; };
 		24694FD119AF187800A4E445 /* TransitionTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694FD019AF187800A4E445 /* TransitionTestTests.m */; };
+		24694FDC19AF199800A4E445 /* FullscreenAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24694FDB19AF199800A4E445 /* FullscreenAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		24694FCA19AF187800A4E445 /* TransitionTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitionTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24694FCF19AF187800A4E445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24694FD019AF187800A4E445 /* TransitionTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionTestTests.m; sourceTree = "<group>"; };
+		24694FDA19AF199800A4E445 /* FullscreenAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullscreenAnimationController.h; sourceTree = "<group>"; };
+		24694FDB19AF199800A4E445 /* FullscreenAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullscreenAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				24694FBC19AF187800A4E445 /* AppDelegate.m */,
 				24694FBE19AF187800A4E445 /* ViewController.h */,
 				24694FBF19AF187800A4E445 /* ViewController.m */,
+				24694FDA19AF199800A4E445 /* FullscreenAnimationController.h */,
+				24694FDB19AF199800A4E445 /* FullscreenAnimationController.m */,
 				24694FC119AF187800A4E445 /* Main.storyboard */,
 				24694FC419AF187800A4E445 /* Images.xcassets */,
 				24694FB719AF187800A4E445 /* Supporting Files */,
@@ -216,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24694FC019AF187800A4E445 /* ViewController.m in Sources */,
+				24694FDC19AF199800A4E445 /* FullscreenAnimationController.m in Sources */,
 				24694FBD19AF187800A4E445 /* AppDelegate.m in Sources */,
 				24694FBA19AF187800A4E445 /* main.m in Sources */,
 			);
@@ -335,6 +341,7 @@
 				INFOPLIST_FILE = TransitionTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -346,6 +353,7 @@
 				INFOPLIST_FILE = TransitionTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
